@@ -1,10 +1,9 @@
-let express = require('express')
-let app = express()
-let port = 5000
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 5000
 
 app.use(express.static('pages'));
 
-app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`)
-    console.log('Para derrubar o servidor: ctrl + c');
-})
+app.listen(PORT, () => {
+    console.log('Server is up and running on port number ' + PORT + ': http://localhost:' + PORT);
+});
